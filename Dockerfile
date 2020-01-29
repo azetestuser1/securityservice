@@ -1,8 +1,7 @@
 From mcr.microsoft.com/dotnet/core/sdk:3.1
 WORKDIR /app
-Copy . .
+Copy ./SecurityService .
 RUN dotnet restore
 RUN dotnet build
 EXPOSE 5000
-WORKDIR /app/SecurityService
-ENTRYPOINT ["dotnet", "run"]
+CMD ["dotnet", "run"]

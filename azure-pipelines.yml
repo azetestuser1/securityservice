@@ -50,4 +50,4 @@ stages:
         repository: 'securitymaster'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
-        #condition: and(succeeded(), startsWith(variables['build.sourceBranch'], 'refs/tags/'))
+        condition: and(succeeded(), startsWith(variables['build.sourceBranch'], 'refs/tags/'))

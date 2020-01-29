@@ -13,5 +13,15 @@ namespace SecurityService.Tests
 	    sd.Ticker = "GOOG";
 	    Assert.Equal("GOOG",sd.Ticker);
         }
+        [Fact]
+        public void Test2()
+        {
+	    SecurityData sd = new SecurityData();
+	    sd.Ticker = "GOOG";
+	    Assert.Equal("GOOG",sd.Ticker);
+	    sd.Ticker = "APPL";
+	    Assert.Equal("APPL",sd.Ticker);
+	}
+
     }
 }

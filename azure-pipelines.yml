@@ -50,5 +50,6 @@ stages:
         repository: 'securitymaster'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
-        tags: $(build.sourcebranchname)
+        tags: |
+         $(Build.SourceBranch)
         condition: and(succeeded(), startsWith(variables['build.sourceBranch'], 'refs/tags/'))

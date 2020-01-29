@@ -23,11 +23,13 @@ namespace SecurityService.Controllers
         public SecurityData Get()
         {
             var rng = new Random();
+	    long _tradeVol = rng.Next(1000,25000);
             return new SecurityData {
                 UpdateDate = DateTime.Now,
                 SecurityName = "Apple Inc",
 		AssetClass = "EQUITY",
-		Ticker = "AAPL"
+		Ticker = "AAPL",
+		TradeVol = _tradeVol
             };
         }
     }

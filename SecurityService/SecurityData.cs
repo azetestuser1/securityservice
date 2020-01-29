@@ -11,5 +11,7 @@ namespace SecurityService
 	public string AssetClass {get; set;}
 
 	public string Ticker {get; set;}
+
+	public long TradeVol {get; set;}
     }
 }

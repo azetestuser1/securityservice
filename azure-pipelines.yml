@@ -41,3 +41,10 @@ stages:
       inputs:
         command: 'test'
         projects: '**/*.csproj'
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'dockerRegistryServiceConnection'
+        repository: 'azetestusersecurityservice'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+      condition: and(succeeded(), startsWith(variables['build.sourceBranch'], 'refs/tags/'))
